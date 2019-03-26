@@ -1,0 +1,82 @@
+<html>
+
+<head>
+
+
+
+</head>
+
+<body>
+
+    <p>Hello Joel!</p>
+
+    <div class="characters">
+        <ul class="hobbits">
+          <li>Frodo Baggins</li>
+          <li>Samwise "Sam" Gamgee</li>
+          <li>Meriadoc "Merry" Brandybuck</li>
+          <li>Peregrin "Pippin" Took</li>
+        </ul>
+        <ul class="elves">
+          <li>Glorfindel</li>
+          <li>Elrond</li>
+          <li>Arwen Evenstar</li>
+        </ul>
+        <ul class="humans">
+          <li>Gandalf</li>
+          <li>Saruman</li>
+          <li>Boromir</li>
+          <li>Faramir</li>
+        </ul>
+      </div>
+    
+    
+    <script>
+     
+      const paragraph = document.querySelector("p");
+
+      paragraph.textContent = "Hello Joel and Adrian Hernandez";
+
+      // creating list items
+
+
+// 1 - Create a list item, <li>Bilbo Baggins</li>, and add it as the last item in .hobbits
+
+      const bilbo = document.createElement("li");   // creating the new element
+      const hobbits = document.querySelector(".hobbits");  // getting the parent element so i can append it to the end
+
+      bilbo.textContent = "Bilbo Baggins";   // adding content to the new element
+
+      hobbits.appendChild(bilbo);      // finally appending the new element
+
+
+    //   2- Create a list item, <li>Legolas</li>, and insert it as the first item in .elves.
+
+       const legolas = document.createElement("li"); // creating the new element
+       const elvesParentElement = document.querySelector(".elves");  // getting the parent element so i can append it to the end
+       const firstItem = elvesParentElement.children[0];
+
+       legolas.textContent = "Legolas";   // adding content to the new element
+
+       elvesParentElement.insertBefore(legolas,firstItem); // Inserting legolas as the first item using insertBefore Method
+
+
+    //   3 -  Create a list item, <li>Aragorn</li>, and insert it before <li>Boromir</li>.
+
+       const aragorn = document.createElement("li");
+       const humans = document.querySelector(".humans");
+       const boromir = humans.children[2];
+
+       aragorn.textContent = "Aragorn";
+
+       humans.insertBefore(aragorn,boromir);
+
+        
+
+
+
+     
+    </script>
+</body>
+
+</html>
