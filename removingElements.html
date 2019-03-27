@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+
+    <ol>
+        <li>Rachel Andrews</li>
+        <li>Jen Simmons</li>
+        <li>Una Kravets</li>
+      </ol>
+
+      <ol class="humans">
+        <li>Gandalf</li>
+        <li>Saruman</li>
+        <li>Aragorn</li>
+        <li>Boromir</li>
+        <li>Faramir</li>
+      </ol>
+
+      <script>
+
+// Let's see it in action. Say you want to remove Jen Simmons from the list below.
+       const jen = document.querySelectorAll("li")[1];
+      jen.parentNode.removeChild(jen);
+
+
+    //   Let's say you want to move Jen from the second position to the first position in the following HTML.
+
+     const list = document.querySelector("ol");
+     const rachel = document.querySelectorAll("li")[0];
+     const jen = list.removeChild(list.children[1]);
+
+     list.insertBefore(jen,rachel);
+
+     
+
+    //  Remove Aragon from the following HTML.
+    // Add it to the end of the list.
+
+    const humansList = document.querySelector(".humans");
+    const aragorn = humansList.removeChild(humansList.children[2]);
+    humansList.appendChild(aragorn);
+
+    
+      
+      </script>
+
+</body>
+
+</html>
